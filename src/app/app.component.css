@@ -1,0 +1,14 @@
+.main-grid-layout{
+    display: grid;
+    grid-template-rows: 15vh 85vh;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:"toolbar toolbar"
+                        "navbar content";
+    column-gap: 10px;
+    row-gap: 10px;
+    
+}
+
+.toolbar{grid-area: toolbar; background-color: red; border-radius: 5px;}
+.navbar{ grid-area: navbar; background-color: blue;border-radius: 5px;}
+.content{ grid-area: content; background-color: green;border-radius: 5px; }

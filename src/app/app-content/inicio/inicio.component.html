@@ -1,3 +1,26 @@
-<p>
-  inicio works!
-</p>
+
+
+<h2 class="titulo">Vista de Alumnos</h2>
+
+<div class="botones">
+  <button (click)="Saludar()">Saludar</button>
+  <button (click)="Salir()">Salir</button>
+  </div>
+
+<div [ngStyle]="{'background-color':show ? '#a3ffa3' : '#e94e4e99' } " [ngClass]="show ? 'activo' : 'inactivo'">
+    <p *ngIf="!show" >{{titledefault | uppercase}}</p>
+    <p *ngIf="show" >{{titledefault | uppercase}}</p>
+</div>
+<div>
+  <h4>Lista de Alumnos:</h4>
+  <ul>
+    <li *ngFor ="let lista of LISTA">
+      {{lista.name}}
+    </li>
+  </ul>
+</div>
+
+
+
+
+

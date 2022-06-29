@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+*{
+    font-family: 'Signika Negative', sans-serif;
+}
 .main-grid-layout{
     display: grid;
     grid-template-rows: 15vh 85vh;
@@ -9,6 +13,6 @@
     
 }
 
-.toolbar{grid-area: toolbar; background-color: red; border-radius: 5px;}
-.navbar{ grid-area: navbar; background-color: blue;border-radius: 5px;}
-.content{ grid-area: content; background-color: green;border-radius: 5px; }
+.toolbar{grid-area: toolbar; border: 1px solid red; border-radius: 5px;}
+.navbar{ grid-area: navbar; border: 1px solid blue;border-radius: 5px;}
+.content{ grid-area: content; border: 1px solid green;border-radius: 5px; }

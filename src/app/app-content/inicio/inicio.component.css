@@ -1,0 +1,30 @@
+.titulo, h4 {
+    margin-left: 1.2rem;
+
+}
+.activo, .inactivo{
+    width: 9rem;
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    line-height: 2;
+    
+}
+.activo p, .inactivo p{
+    margin: 1px 10px;
+    font-family: 'Signika Negative', sans-serif;
+    text-align: center;
+}
+
+.botones{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.botones button{
+    padding: 8px;
+    color: white;
+    background: black;
+    border-radius: 8px;
+    border: 1px solid white;
+    margin-right: 1rem;
+}

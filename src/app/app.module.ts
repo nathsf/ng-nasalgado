@@ -6,6 +6,8 @@ import { AppToolbarComponent } from './app-toolbar/app-toolbar.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { AppContentComponent } from './app-content/app-content.component';
 import { InicioComponent } from './app-content/inicio/inicio.component';
+import { FormularioComponent } from './app-content/formulario/formulario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [			
@@ -13,10 +15,13 @@ import { InicioComponent } from './app-content/inicio/inicio.component';
       AppToolbarComponent,
       AppNavbarComponent,
       AppContentComponent,
-      InicioComponent
+      InicioComponent,
+      FormularioComponent
    ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

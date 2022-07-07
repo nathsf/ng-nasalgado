@@ -1,0 +1,67 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-10 px-7">
+      <h2>Formulario</h2>
+      <div class="card">
+        <div class="card-body">
+          <form [formGroup]="reactiveForm" #form="ngForm">
+            <div class="row">
+              <div class="col mb-2">
+                <label for="name" class="form-label">Nombre:</label>
+                <input type="text" id="name" name="name" formControlName="name" placeholder="Your name" required minlength="2" maxlength="20" class="form-control form-control-sm" [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+                  <div *ngIf="name.errors?.['required']">
+                    Nombre es requerido
+                  </div>
+                  <div *ngIf="name.errors?.['minlength']">
+                    Nombre debe ser a lo menos de 2 caracteres
+                  </div>
+                  <div *ngIf="name.errors?.['maxlength']">
+                    Nombre debe ser a lo máximo de 20 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-2">
+                <label for="lastname" class="form-label">Apellidos:</label>
+                <input type="text" id="lastname" name="lastname" formControlName="lastname" placeholder="Your lastname" minlength="2" maxlength="50" class="form-control form-control-sm" [class.is-invalid]="lastname.invalid && (lastname.dirty || lastname.touched)">
+                <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="invalid-feedback">
+                  <div *ngIf="lastname.errors?.['required']">
+                    Nombre es requerido
+                  </div>
+                  <div *ngIf="lastname.errors?.['minlength']">
+                    Nombre debe ser a lo menos de 2 caracteres
+                  </div>
+                  <div *ngIf="lastname.errors?.['maxlength']">
+                    Nombre debe ser a lo máximo de 20 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-2">
+                <label for="age" class="form-label">Edad:</label>
+                <input type="number" id="age" name="age" formControlName="age" required  class="form-control form-control-sm" [class.is-invalid]="age.invalid && (age.dirty || age.touched)">
+                <div *ngIf="age.invalid && (age.dirty || age.touched)" class="invalid-feedback">
+                  <div *ngIf="age.errors?.['required']">
+                    Edad es requerido
+                  </div>
+                  <div *ngIf="age.errors?.['min']">
+                    Edad debe ser un número válido
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-2 mt-4">
+                <button type="button" class="btn btn-sm btn-primary" (click)="guardar()">Guardar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
